@@ -1,13 +1,13 @@
-import {Text, TouchableOpacity, View} from "react-native";
-import React from "react";
-import styles from "./styles";
+import { Text, TouchableOpacity, View } from 'react-native';
+import React from 'react';
+import styles from './styles';
 
 function Navigation({ state, descriptors, navigation }) {
   return (
       <View style={styles.container}>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
-          const label = options.tabBarLabel || options.title || route.name
+          const label = options.tabBarLabel || options.title || route.name;
           const isFocused = state.index === index;
 
           const onPress = () => {
@@ -23,12 +23,10 @@ function Navigation({ state, descriptors, navigation }) {
           };
 
           return (
-              <TouchableOpacity
-                  key={index}
-                  onPress={onPress}
+              <TouchableOpacity key={index} onPress={onPress}
                   style={styles.touchableOpacity}
               >
-                <Text style={{...styles.navItemText, color: isFocused ? '#2C73D2' : '#222222' }}>
+                <Text style={{ ...styles.navItemText, color: isFocused ? '#2C73D2' : '#222222' }}>
                   {label}
                 </Text>
                 {isFocused && <View style={styles.line} />}
