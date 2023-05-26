@@ -1,23 +1,17 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Background from "../../components/background";
 import { ThemedText as Text } from "../../theme";
-
-const styles = StyleSheet.create({
-  accountsContainer: {
-    color: "white",
-    flex: 1,
-  },
-  transactionsContainer: {
-    color: "white",
-    flex: 1,
-  },
-});
+import styles from "./home.styles";
+import BgElements from "./bg-elements";
 
 const Home = () => (
   <Background>
     <View style={styles.accountsContainer}>
-      <Text>Home Screen</Text>
+      <BgElements />
+      <View style={styles.accountsContentContainer}>
+        <Text style={styles.accountsTitle}>Your accounts</Text>
+      </View>
     </View>
     <View style={styles.transactionsContainer}>
       <Text>Transactions</Text>
