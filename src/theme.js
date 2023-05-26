@@ -5,9 +5,9 @@ import { useFonts } from "expo-font";
 export const useLoadAssets = () => {
   const [loaded] = useFonts({
     // eslint-disable-next-line global-require
-    SourceCodePro: require("./assets/fonts/SourceCodePro-Regular.ttf"),
+    Roboto: require("./assets/fonts/Roboto-Regular.ttf"),
     // eslint-disable-next-line global-require
-    "SourceCodePro-SemiBold": require("./assets/fonts/SourceCodePro-SemiBold.ttf"),
+    "Roboto-Bold": require("./assets/fonts/Roboto-Medium.ttf"),
   });
   return { loaded };
 };
@@ -15,7 +15,7 @@ export const themeDefaultValue = {
   text: {
     color: "white",
     fontSize: 16,
-    fontFamily: "SourceCodePro",
+    fontFamily: "Roboto",
   },
 };
 const ThemeContext = React.createContext(themeDefaultValue);
