@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import styles from "./bg-elements.styles";
 
-const Home = () => (
+const BgElements = () => (
   <View style={styles.container}>
     <View style={[styles.circle, styles.circle1]} />
     <View style={[styles.circle, styles.circle2]} />
@@ -10,4 +10,4 @@ const Home = () => (
   </View>
 );
 
-export default Home;
+export default BgElements;

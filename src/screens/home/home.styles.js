@@ -7,8 +7,10 @@ const styles = StyleSheet.create({
   },
   accountsContentContainer: {
     flex: 1,
-    padding: 16,
-    paddingTop: 60,
+    paddingTop: 50,
+    paddingLeft: 32,
+    paddingRight: 32,
+    paddingBottom: 16,
   },
   accountsTitle: {
     fontSize: 18,
